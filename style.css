@@ -1,0 +1,225 @@
+:root {
+    --primary: #FFD700; /* Gold */
+    --dark: #0f0f0f;
+    --dark-grey: #1a1a1a;
+    --text-light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--text-light);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-light);
+    padding-top: 20px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--dark);
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+/* Details Section */
+.details {
+    padding: 80px 0;
+    background: #141414;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #252525;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 4px solid var(--primary);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Admission Form */
+.admission-form {
+    padding: 100px 0;
+    background: var(--dark-grey);
+}
+
+.form-wrapper {
+    background: #252525;
+    padding: 40px;
+    border-radius: 15px;
+    border-top: 5px solid var(--primary);
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-wrapper h2 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.form-wrapper p {
+    margin-bottom: 30px;
+    color: #bbb;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group textarea {
+    resize: none;
+}
+
+/* Grid for side-by-side inputs */
+.grid-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* File Input */
+input[type="file"] {
+    padding: 8px;
+    background: #222;
+    cursor: pointer;
+}
+
+/* Date icon white */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .form-wrapper {
+        padding: 25px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 100px 0;
+    }
+}
