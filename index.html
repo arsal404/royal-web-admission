@@ -338,13 +338,6 @@
 
                     </button>
 
-                    <!-- Success Message -->
-
-                    <div class="success-message" id="successMessage">
-                        <i class="fa-solid fa-circle-check"></i>
-                        Application Submitted Successfully!
-                    </div>
-
                 </form>
 
             </div>
@@ -463,8 +456,6 @@
 
         const btnText = document.querySelector(".btn-text");
 
-        const successMessage = document.getElementById("successMessage");
-
         let isSubmitting = false;
 
         form.addEventListener("submit", function () {
@@ -489,15 +480,6 @@
                 <i class="fa-solid fa-spinner fa-spin"></i>
                 Submitting...
             `;
-
-            // Show success after delay
-            // (Visual feedback only)
-
-            setTimeout(() => {
-
-                successMessage.classList.add("show");
-
-            }, 1500);
 
         });
 
