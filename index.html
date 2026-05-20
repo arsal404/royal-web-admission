@@ -367,6 +367,14 @@
 
                     </button>
 
+                    <!-- Success Message -->
+
+<!--
+                    <div class="success-message" id="successMessage">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Application Submitted Successfully!
+                    </div>
+-->
                 </form>
 
             </div>
@@ -466,13 +474,14 @@
 				Owner: Sir Waqar Ali |
 				Admin:
 				<a
-					href="https://wa.me/923192037007"
+					href="https://wa.me/923192027007"
 					target="_blank"
 					style="color: inherit; text-decoration: none;"
 				>
 					Arsalan Khalid
 				</a>
 			</p>
+
 
             <div class="footer-line">
                 Your Success, Our Mission!
@@ -481,6 +490,100 @@
         </div>
 
     </footer>
+	
+	<!-- ================= ANNOUNCEMENT POPUP ================= -->
+
+<div class="announcement-popup" id="announcementPopup">
+
+    <div class="announcement-box">
+
+        <button class="close-popup" id="closePopup">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="announcement-header">
+
+            <i class="fa-solid fa-bullhorn"></i>
+
+            <h2>Important Announcement</h2>
+
+        </div>
+
+        <div class="announcement-content">
+
+            <p>
+                All Website Development students of Royal Academy who have already
+                submitted the online application are informed to visit Royal Academy
+                and confirm their admission as soon as possible so their seats can be reserved/fixed.
+            </p>
+
+            <p>
+                Due to Eid-ul-Adha Holidays (Bakra Eid), the online registration deadline
+                has been officially extended.
+            </p>
+
+            <div class="announcement-dates">
+
+                <div>
+                    <span>Previous Last Date:</span>
+                    <del>20 May 2026</del>
+                </div>
+
+                <div>
+                    <span>New Last Date:</span>
+                    <strong>01 June 2026</strong>
+                </div>
+
+                <div>
+                    <span>Classes Start:</span>
+                    <strong>02 June 2026</strong>
+                </div>
+
+            </div>
+
+            <p>
+                Students who have not applied yet can now submit their online
+                application till 1 June 2026.
+            </p>
+
+            <p>
+                <strong>Address:</strong><br>
+                Jamnadas Near Faizan-e-Madina, Mirpurkhas, Sindh
+            </p>
+
+            <div class="popup-buttons">
+
+                <a
+                    href="https://maps.app.goo.gl/f8sSwNVPwrgYHW1CA?g_st=as"
+                    target="_blank"
+                    class="popup-btn map"
+                >
+                    <i class="fa-solid fa-location-dot"></i>
+                    Open Location
+                </a>
+
+                <a
+                    href="#apply"
+                    class="popup-btn apply"
+                >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Apply Online
+                </a>
+
+            </div>
+
+            <div class="announcement-footer">
+
+                Thank You <br>
+                Royal Academy Administration
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
     <!-- ================= JS ================= -->
 
@@ -491,6 +594,8 @@
         const submitBtn = document.querySelector(".btn-submit");
 
         const btnText = document.querySelector(".btn-text");
+
+//      const successMessage = document.getElementById("successMessage");
 
         let isSubmitting = false;
 
@@ -517,9 +622,49 @@
                 Submitting...
             `;
 
+            // Show success after delay
+            // (Visual feedback only)
+
+<!--            setTimeout(() => {
+
+                successMessage.classList.add("show");
+
+            }, 1500);
+-->
         });
 
     </script>
+	<script>
+	/* ================= POPUP CLOSE ================= */
+
+const announcementPopup =
+    document.getElementById("announcementPopup");
+
+const closePopup =
+    document.getElementById("closePopup");
+
+closePopup.addEventListener("click", () => {
+
+    announcementPopup.style.display = "none";
+
+});
+
+/* ================= APPLY BUTTON CLOSE POPUP ================= */
+
+const applyBtn =
+    document.querySelector(".popup-btn.apply");
+
+if (applyBtn) {
+
+    applyBtn.addEventListener("click", function () {
+
+        announcementPopup.style.display = "none";
+
+    });
+
+}
+	</script>
+
 
 </body>
 </html>
